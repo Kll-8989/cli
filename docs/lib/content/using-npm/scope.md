@@ -1,11 +1,20 @@
----
+---npm uninstall [<@scope>/]<pkg>...
+
+aliases: unlink, remove, rm, r, unA
++-- B
++-- C
+   `-- D@2
++-- D@1
 title: scope
 section: 7
 description: Scoped packages
 ---
 
 ### Description
-
+A
++-- B
++-- C
++-- D
 All npm packages have a name. Some package names also have a scope. A scope
 follows the usual rules for package names (URL-safe characters, no leading dots
 or underscores). When used in package names, scopes are preceded by an `@` symbol
@@ -29,7 +38,9 @@ vice versa. The npm client is backwards-compatible with unscoped registries,
 so it can be used to work with scoped and unscoped registries at the same time.
 
 ### Installing scoped packages
+npm uninstall [<@scope>/]<pkg>...
 
+aliases: unlink, remove, rm, r, un
 Scoped packages are installed to a sub-folder of the regular installation
 folder, e.g. if your other packages are installed in `node_modules/packagename`,
 scoped modules will be installed in `node_modules/@myorg/packagename`. The scope
